@@ -1,0 +1,15 @@
+<?php
+
+use App\Livewire\Pages\Units;
+use \App\Livewire\Pages\Users;
+use Illuminate\Support\Facades\Route;
+
+Route::view('/', 'welcome')->name('home');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::get('units', Units::class)->name('units');
+    Route::get('users', Users::class)->name('users');
+});
+
+require __DIR__.'/settings.php';

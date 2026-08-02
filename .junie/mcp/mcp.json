@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/Users/amintoorchi/.config/herd-lite/bin/php",
+            "args": [
+                "/Users/amintoorchi/Desktop/Code/prompt-sara/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
