@@ -5,7 +5,6 @@ namespace App\Livewire\Pages;
 use App\Models\Unit;
 use App\Models\User;
 use Flux\Flux;
-use Illuminate\Support\Str;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -14,9 +13,11 @@ use Livewire\Component;
 class Units extends Component
 {
     public ?string $user_id = null;
+
     public string $home_number = '';
 
     public string $floor = '';
+
     public string $status = 'occupied';
 
     public string $plate_number = '';
@@ -41,7 +42,6 @@ class Units extends Component
             'status' => ['string', 'max:255'],
             'plate_number' => ['required', 'string', 'max:255'],
         ]);
-
 
         $this->user_id = $this->user_id ?: null;
 

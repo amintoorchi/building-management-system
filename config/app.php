@@ -2,11 +2,7 @@
 
 return [
 
-
-
     'building_name' => env('BUILDING_NAME', 'Unknown Building'),
-
-
 
     /*
     |--------------------------------------------------------------------------

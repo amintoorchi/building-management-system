@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Pages;
 
-use App\Models\Unit;
 use App\Models\User;
 use Flux\Flux;
 use Livewire\Attributes\Computed;
@@ -12,9 +11,10 @@ use Livewire\Component;
 #[Title('افراد')]
 class Users extends Component
 {
-
     public string $name = '';
+
     public ?string $phone_number = '';
+
     public ?int $selectedUserId = null;
 
     public function confirmDelete(int $userId): void
@@ -26,7 +26,7 @@ class Users extends Component
 
     public function delete(): void
     {
-        if (!$this->selectedUserId) {
+        if (! $this->selectedUserId) {
             return;
         }
 
@@ -36,7 +36,6 @@ class Users extends Component
 
         Flux::modal('delete-user')->close();
     }
-
 
     public function resetForm(): void
     {
